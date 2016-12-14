@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Code Freeze\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-30 06:32-0600\n"
+"PO-Revision-Date: 2012-04-30 06:33-0600\n"
+"Last-Translator: Kevin Davis <kev@tnw.org>\n"
+"Language-Team: Kevin Davis <kev@tnw.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: code-freeze.php:45
+msgid "CODE FREEZE NOTICE"
+msgstr ""
+
+#: code-freeze.php:45
+msgid "This site is currently being migrated to a new location. Changes made here will not be reflected in the migrated site. To avoid lost work, please do not make any changes to the site until this message is removed."
+msgstr ""
+
+#: code-freeze.php:59
+msgid "Warning: Code Freeze is in effect."
+msgstr ""
+
+#: code-freeze.php:59
+msgid "All changes made during this period will be lost."
+msgstr ""
+
