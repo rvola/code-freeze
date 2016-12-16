@@ -41,6 +41,7 @@ License: GPLv2
 if ( ! function_exists( 'cf_custom_login_message' ) ) {
 	add_filter( 'login_message' , 'cf_custom_login_message' );
 	
+	load_plugin_textdomain( 'codefreeze', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	/**
 	 * Insert text onto login page
 	 *
