@@ -7,15 +7,15 @@ jQuery(document).ready(function($) {
 	$("#wpcontent :input").attr("disabled", true);
 	$("#wpcontent select").attr("disabled", true);
 	$("#wpcontent textarea").attr("disabled", true);
-	
+
 	// class removals
 	$("#widget-list").children().removeClass();
 	$(".widget").parent().removeClass();
 	$(".menu-item-handle").removeClass();
-	
+
 	// hide elements that can't reliably be disabled
 	var hide = [
-		'.update-nag', 
+		'.update-nag',
 		'#wp-admin-bar-updates',
 		'#wp-admin-bar-new-content',
 		'#wp-admin-bar-edit-profile',
@@ -62,23 +62,25 @@ jQuery(document).ready(function($) {
 		'.page-title-action',
 		'#new-tag-post_tag',
 	];
-	
+
 	var i;
 	for (i = 0; i < hide.length; ++i) {
 		$(hide[i]).hide();
 	}
-	
+
 	// enable export
 	$('#export-filters :input').removeAttr('disabled');
 	$('#export-filters p').show();
 	$('#export-filters #submit').show();
-	
+
 	// do kindly allow this plugin to be deactivated by authorized persons
 	if ( cf.wp_version >= '4.6' ) {
 		$(".plugins").data('slug','code-freeze').find("div.row-actions").show();
 	} else {
 		$("#code-freeze.active td.plugin-title div.row-actions").show();
 	}
+
 	//kick media modal page WP > 4.0
 	$('#tmpl-media-modal').remove();
+
 });

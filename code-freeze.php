@@ -40,8 +40,8 @@ License: GPLv2
 
 if ( ! function_exists( 'cf_custom_login_message' ) ) {
 	add_filter( 'login_message' , 'cf_custom_login_message' );
-	
 	load_plugin_textdomain( 'codefreeze', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
 	/**
 	 * Insert text onto login page
 	 *
@@ -55,7 +55,7 @@ if ( ! function_exists( 'cf_custom_login_message' ) ) {
 
 if ( ! function_exists( 'cf_effective_notice' ) ) {
 	add_action( 'admin_notices', 'cf_effective_notice' );
-	
+
 	/**
 	 * Show notice on site pages when site disabled
 	 *
@@ -98,14 +98,14 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 
 		// make localizable
 		load_plugin_textdomain( 'codefreeze', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-		
+
 		// remove QuickPress widget
 		remove_meta_box('dashboard_quick_press', 'dashboard', 'normal');
-		
+
 		// remove menu items - doesn't work for all of them in admin_menu
 		cf_modify_menu();
 	}
-	
+
 	/**
 	 * Load javascript on all admin pages
 	 *
@@ -117,7 +117,7 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 			'wp_version' => get_bloginfo( 'version' )
 		) );
 	}
-	
+
 	/**
 	 * Close comments and trackbacks while activated
 	 *
@@ -127,7 +127,7 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 		add_filter( 'the_posts', 'cf_set_comment_status' );
 		add_filter( 'comments_open', 'cf_close_the_comments', 10, 2 );
 		add_filter( 'pings_open', 'cf_close_the_comments', 10, 2 );
-		
+
 		/**
 		 * Close comments and trackbacks while activated
 		 *
@@ -140,7 +140,7 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 			}
 			return $posts;
 		}
-		
+
 		/**
 		 * Close comments and trackbacks while activated
 		 *
@@ -164,7 +164,7 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 	function cf_remove_media_buttons() {
 		remove_action( 'media_buttons', 'media_buttons' );
 	}
-	
+
 	/**
 	 * Set visual editor as "read only"
 	 *
@@ -175,7 +175,7 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 		$args['readonly'] = 1;
 		return $args;
 	}
-	
+
 	/**
 	 * Remove invalid action links
 	 *
@@ -184,17 +184,17 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 	function cf_remove_row_actions($actions) {
 		unset( $actions['trash'] );
 		unset( $actions['delete'] );
-		
+
 		// no normal filter action for this (install plugin row)
 		foreach ($actions as $k => $v) {
 			if (strpos($v, 'class="install-now') ) {
 				unset ($actions[$k]);
 			}
 		}
-		
+
 		return $actions;
 	}
-	
+
 	/**
 	 * Remove add/edit menu items
 	 *
@@ -216,7 +216,7 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 		remove_submenu_page('tools.php', 'import.php');
 		remove_submenu_page('update-core.php', 'upgrade.php');
 	}
-	
+
 	/**
 	 * Remove Activation/Deactivation/Edit links for all plugins but this one
 	 *
@@ -224,15 +224,15 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 	 */
 	function cf_plugin_action_links($links, $file) {
 		$this_plugin = plugin_basename(__FILE__);
-		
+
 		unset($links['edit']);
-		
+
 		if ($file !== $this_plugin) {
 			return array(); // prevents PHP warning from any plugins that have modified the action links
 		}
 		return $links;
 	}
-	
+
 	/**
 	 * Remove topic replies and new topics from bbPress
 	 *
