@@ -239,3 +239,19 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 		}
 	}
 }
+
+/*--------------------------------------------------------- */
+/* !Activation/Deactivation  */
+/*--------------------------------------------------------- */
+
+register_activation_hook( __FILE__, 'cf_activation_action');
+function cf_activation_action() {
+	add_option( 'cf-backup-users_can_register', get_option( 'users_can_register'), false, true );
+	update_option( 'users_can_register', 0 );
+}
+
+register_deactivation_hook( __FILE__, 'cf_desactivation_action');
+function cf_desactivation_action() {
+	update_option( 'users_can_register', get_option( 'cf-backup-users_can_register') );
+	delete_option( 'cf-backup-users_can_register' );
+}
