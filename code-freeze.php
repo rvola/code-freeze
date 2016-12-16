@@ -80,7 +80,13 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 	add_filter( 'plugin_install_action_links', 'cf_remove_row_actions', 10, 1 );
 	add_filter( 'theme_install_action_links', 'cf_remove_row_actions', 10, 1 );
 	add_filter('plugin_action_links', 'cf_plugin_action_links', 10, 2);
-	
+
+	/*Prevent Automatic Background Updates */
+	add_filter( 'auto_update_core', '__return_false' );
+	add_filter( 'auto_update_plugin', '__return_false' );
+	add_filter( 'auto_update_translation', '__return_false' );
+	add_filter( 'auto_update_theme', '__return_false' );
+
 	/**
 	 * Register javascript, disable quickpress widget, remove add/edit menu items
 	 *
