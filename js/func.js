@@ -58,7 +58,9 @@ jQuery(document).ready(function($) {
 		'.quicktags-toolbar',
 		'.menu-delete',
 		'.locations-row-links',
-		'.manage-menus'
+		'.manage-menus',
+		'.page-title-action',
+		'#new-tag-post_tag',
 	];
 	
 	var i;
