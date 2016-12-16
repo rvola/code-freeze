@@ -76,4 +76,6 @@ jQuery(document).ready(function($) {
 	// do kindly allow this plugin to be deactivated by authorized persons
 	$("#code-freeze.active td.plugin-title div.row-actions").show();
 	
+	//kick media modal page WP > 4.0
+	$('#tmpl-media-modal').remove();
 });
