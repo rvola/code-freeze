@@ -94,8 +94,8 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 	 */
 	function cf_admin_init() {
 		// register js
-		wp_register_script( 'codefreeze-js', plugins_url('/js/func.js', __FILE__) );
-		
+		wp_register_script( 'codefreeze-js', plugins_url('/js/func.js', __FILE__), false, '1.3.0', true );
+
 		// make localizable
 		load_plugin_textdomain( 'codefreeze', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 		
