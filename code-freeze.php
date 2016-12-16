@@ -71,7 +71,6 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 	add_action( 'admin_print_scripts', 'cf_load_admin_head' );
 	add_action( 'plugins_loaded', 'cf_close_comments' );
 	add_action( 'admin_head' , 'cf_remove_media_buttons' );
-	//add_filter( 'user_can_richedit', '__return_false' );
 	add_filter( 'tiny_mce_before_init', 'cf_visedit_readonly' );
 	add_filter( 'post_row_actions', 'cf_remove_row_actions', 10, 1 );
 	add_filter( 'page_row_actions', 'cf_remove_row_actions', 10, 1 );
