@@ -1,7 +1,9 @@
 ﻿=== Code Freeze ===
-Contributors: k3davis
+Developer: studio RVOLA
+Author URI: http://www.rvola.com
+Developer original: Kevin Davis - http://www.davistribe.org
+Contributors: k3davis, rvola
 Tags: code freeze, read only, disable, disable comments, disable dashboard, migration
-Author URI: http://www.davistribe.org/code/
 Requires at least: 3.0
 Tested up to: 3.8
 Stable tag: trunk

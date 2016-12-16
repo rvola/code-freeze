@@ -2,10 +2,11 @@
 
 /*
 Plugin Name: Code Freeze
-Plugin URI: http://wordpress.org/extend/plugins/code-freeze/
+Plugin URI: https://github.com/rvola/code-freeze
 Description: Temporarily puts your WordPress into a "read only" state. When activated, comments and trackbacks are temporarily disabled as well as changes in the dashboard. Deactivate to restore full functionality.
-Author: Kevin Davis
-Author URI: http://www.davistribe.org/
+Author: studio RVOLA
+Author URI: http://www.rvola.com
+Author original: Kevin Davis - http://www.davistribe.org
 Text Domain: codefreeze
 Domain Path: /languages/
 Version: 1.2.3
