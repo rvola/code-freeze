@@ -9,7 +9,7 @@ Author URI: http://www.rvola.com
 Author original: Kevin Davis - http://www.davistribe.org
 Text Domain: codefreeze
 Domain Path: /languages/
-Version: 1.2.3
+Version: rvola-1.3.0
 License: GPLv2
 */
 
