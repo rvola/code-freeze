@@ -74,8 +74,11 @@ jQuery(document).ready(function($) {
 	$('#export-filters #submit').show();
 	
 	// do kindly allow this plugin to be deactivated by authorized persons
-	$("#code-freeze.active td.plugin-title div.row-actions").show();
-	
+	if ( cf.wp_version >= '4.6' ) {
+		$(".plugins").data('slug','code-freeze').find("div.row-actions").show();
+	} else {
+		$("#code-freeze.active td.plugin-title div.row-actions").show();
+	}
 	//kick media modal page WP > 4.0
 	$('#tmpl-media-modal').remove();
 });

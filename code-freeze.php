@@ -107,6 +107,9 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 	 */
 	function cf_load_admin_head() {
 		wp_enqueue_script( 'codefreeze-js' );
+		wp_localize_script( 'codefreeze-js', 'cf', array(
+			'wp_version' => get_bloginfo( 'version' )
+		) );
 	}
 	
 	/**
