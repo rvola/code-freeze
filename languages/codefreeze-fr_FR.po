@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Code Freeze\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-16 08:47+0100\n"
+"PO-Revision-Date: 2016-12-16 08:50+0100\n"
+"Language-Team: studio RVOLA <http://www.rvola.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Generator: Poedit 1.8.11\n"
+"Last-Translator: studio RVOLA <http://www.rvola.com>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_FR\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: code-freeze.php:45
+msgid "CODE FREEZE NOTICE"
+msgstr "ATTENTION / CODE FREEZE"
+
+#: code-freeze.php:45
+msgid ""
+"This site is currently being migrated to a new location. Changes made here "
+"will not be reflected in the migrated site. To avoid lost work, please do "
+"not make any changes to the site until this message is removed."
+msgstr ""
+"Ce site est en cours de migration vers un nouvel emplacement. Les "
+"modifications apportées ici ne figureront pas sur le site migré. Pour "
+"éviter tout arrêt de travail, s’il vous plaît ne pas apporter de "
+"modifications au site jusqu'à ce que ce message soit supprimé."
+
+#: code-freeze.php:59
+msgid "Warning: Code Freeze is in effect."
+msgstr "Avertissement : Code Freeze actif."
+
+#: code-freeze.php:59
+msgid "All changes made during this period will be lost."
+msgstr ""
+"Toutes les modifications apportées au cours de cette période seront "
+"perdues."
