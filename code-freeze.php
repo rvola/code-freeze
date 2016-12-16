@@ -71,7 +71,7 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 	add_action( 'admin_print_scripts', 'cf_load_admin_head' );
 	add_action( 'plugins_loaded', 'cf_close_comments' );
 	add_action( 'admin_head' , 'cf_remove_media_buttons' );
-	add_filter( 'tiny_mce_before_init', 'cf_visedit_readonly' );
+	add_filter( 'tiny_mce_before_init', 'cf_visedit_readonly',10 ,1 );
 	add_filter( 'post_row_actions', 'cf_remove_row_actions', 10, 1 );
 	add_filter( 'page_row_actions', 'cf_remove_row_actions', 10, 1 );
 	add_filter( 'user_row_actions', 'cf_remove_row_actions', 10, 1 );
@@ -161,10 +161,10 @@ if ( ! function_exists( 'cf_admin_init' ) ) {
 	 *
 	 * @return  array Array of arguments to send to editor
 	 */
-	function cf_visedit_readonly() {
+	function cf_visedit_readonly( $args ) {
 		// suppress php warning in core when editor is read only
-		error_reporting(0);
-		return $args['readonly'] = 1;
+		$args['readonly'] = 1;
+		return $args;
 	}
 	
 	/**
