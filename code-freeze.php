@@ -48,7 +48,7 @@ if ( ! function_exists( 'cf_custom_login_message' ) ) {
 	 * @return  string Text to insert onto login page
 	 */
 	function cf_custom_login_message() {
-		$message = '<p style="padding:10px;border: 2px solid red; margin-bottom: 10px;"><span style="color:red;font-weight:bold;">'.__('CODE FREEZE NOTICE', 'codefreeze' ).':</span><br/>'.__('This site is currently being migrated to a new location. Changes made here will not be reflected in the migrated site. To avoid lost work, please do not make any changes to the site until this message is removed.', 'codefreeze' ).'</p>';
+		$message = '<p class="message" style="padding:10px;border: 2px solid red; margin-bottom: 10px;"><span style="color:red;font-weight:bold; text-align:center;display:block">'.__('CODE FREEZE NOTICE', 'codefreeze' ).':</span><br/>'.__('This site is currently being migrated to a new location. Changes made here will not be reflected in the migrated site. To avoid lost work, please do not make any changes to the site until this message is removed.', 'codefreeze' ).'</p>';
 		return $message;
 	}
 }
